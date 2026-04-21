@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bernadette Tongol | Business Development & Retail Consultant UAE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #1B3A6B;
+    --navy-deep: #0F2244;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --cream: #FAF8F4;
+    --warm-white: #FFFFFF;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --text-light: #888;
+    --border: rgba(201,168,76,0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    background: rgba(27,58,107,0.97);
+    backdrop-filter: blur(12px);
+    padding: 18px 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 600;
+    color: var(--gold); letter-spacing: 0.04em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.8); text-decoration: none;
+    font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em;
+    text-transform: uppercase; transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, #2A5298 100%);
+    display: flex; align-items: center;
+    padding: 120px 5% 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -20%; right: -10%;
+    width: 600px; height: 600px;
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 50%;
+    animation: rotateSlow 30s linear infinite;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: -15%; right: 5%;
+    width: 350px; height: 350px;
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 50%;
+    animation: rotateSlow 20s linear infinite reverse;
+  }
+  @keyframes rotateSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .hero-content { max-width: 700px; position: relative; z-index: 2; }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold-light);
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 2px; margin-bottom: 28px;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 300; color: #fff;
+    line-height: 1.05; letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+  .hero h1 span { color: var(--gold); font-style: italic; }
+  .hero-subtitle {
+    font-size: 1.05rem; color: rgba(255,255,255,0.65);
+    font-weight: 300; margin: 24px 0 40px;
+    line-height: 1.7; max-width: 520px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.8s 0.3s ease both; }
+  .btn-primary {
+    background: var(--gold); color: var(--navy-deep);
+    padding: 14px 32px; border: none; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em;
+    text-transform: uppercase; text-decoration: none;
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.85);
+    padding: 14px 32px; border: 1px solid rgba(255,255,255,0.3);
+    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; font-weight: 400; letter-spacing: 0.05em;
+    text-transform: uppercase; text-decoration: none;
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-stats {
+    display: flex; gap: 40px; margin-top: 64px; padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 600; color: var(--gold); line-height: 1;
+  }
+  .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTIONS COMMON ── */
+  section { padding: 100px 5%; }
+  .section-label {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 12px; font-weight: 500;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300; color: var(--navy-deep); line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section-title em { color: var(--gold); font-style: italic; }
+  .section-intro { font-size: 1rem; color: var(--text-mid); line-height: 1.8; max-width: 540px; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--warm-white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2px; margin-top: 60px;
+  }
+  .service-card {
+    background: var(--cream); padding: 44px 36px;
+    border-top: 3px solid transparent;
+    transition: all 0.35s; cursor: default; position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 0;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    transition: height 0.4s ease; z-index: 0;
+  }
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover { border-top-color: var(--gold); }
+  .service-card:hover .service-num,
+  .service-card:hover .service-title,
+  .service-card:hover .service-desc { color: #fff; position: relative; z-index: 1; }
+  .service-card:hover .service-num { color: var(--gold); }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem; font-weight: 300; color: rgba(27,58,107,0.08);
+    line-height: 1; margin-bottom: 20px; transition: color 0.4s;
+  }
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 14px; line-height: 1.3; transition: color 0.4s;
+    position: relative; z-index: 1;
+  }
+  .service-desc {
+    font-size: 0.88rem; color: var(--text-mid); line-height: 1.75;
+    transition: color 0.4s; position: relative; z-index: 1;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--navy-deep);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+  .about .section-title { color: #fff; }
+  .about .section-label { color: var(--gold); }
+  .about-body { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.85; margin-top: 24px; }
+  .about-body p + p { margin-top: 16px; }
+  .about-right { display: flex; flex-direction: column; gap: 0; }
+  .cred-item {
+    padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: flex-start; gap: 20px;
+  }
+  .cred-icon {
+    width: 40px; height: 40px; background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .cred-title { font-size: 0.9rem; font-weight: 500; color: #fff; margin-bottom: 4px; }
+  .cred-sub { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+
+  /* ── BRANDS ── */
+  .brands { background: var(--cream); text-align: center; }
+  .brands-intro { font-size: 0.9rem; color: var(--text-light); margin: 0 auto 50px; max-width: 480px; }
+  .brands-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 800px; margin: 0 auto; }
+  .brands-col h4 {
+    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px; font-weight: 500;
+  }
+  .brand-tag {
+    display: inline-block; background: var(--warm-white);
+    border: 1px solid var(--border); padding: 8px 18px;
+    font-size: 0.82rem; color: var(--navy); margin: 4px;
+    font-family: 'Cormorant Garamond', serif; font-size: 1rem; letter-spacing: 0.03em;
+    transition: all 0.25s;
+  }
+  .brand-tag:hover { background: var(--navy); color: var(--gold); border-color: var(--navy); }
+
+  /* ── HOW WE WORK ── */
+  .howwework { background: var(--warm-white); }
+  .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+  .engagement-card {
+    padding: 40px 32px; border: 1px solid rgba(27,58,107,0.1);
+    position: relative; transition: all 0.3s;
+  }
+  .engagement-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(27,58,107,0.08); }
+  .engagement-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 12px;
+  }
+  .engagement-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+  .engagement-badge {
+    position: absolute; top: -1px; left: 32px;
+    background: var(--gold); color: var(--navy-deep);
+    font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 4px 12px;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+    text-align: center; padding: 100px 5%;
+  }
+  .contact .section-title { color: #fff; }
+  .contact .section-label { color: var(--gold); }
+  .contact-sub { font-size: 1rem; color: rgba(255,255,255,0.6); margin: 16px auto 48px; max-width: 480px; line-height: 1.7; }
+  .contact-details { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-top: 40px; }
+  .contact-item { text-align: center; }
+  .contact-item-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
+  .contact-item-val { font-size: 1rem; color: #fff; font-weight: 400; }
+  .contact-item-val a { color: var(--gold); text-decoration: none; }
+  .contact-item-val a:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-deep); padding: 24px 5%;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+  footer span { font-size: 0.78rem; color: rgba(201,168,76,0.5); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-stats { gap: 24px; flex-wrap: wrap; }
+    .about { grid-template-columns: 1fr; gap: 48px; }
+    .engagement-grid { grid-template-columns: 1fr; }
+    .brands-cols { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Bernadette Tongol</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#brands">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-tag">Business Development &amp; Retail Consultant · UAE</div>
+    <h1>Grow your<br/>business in the<br/><span>UAE market.</span></h1>
+    <p class="hero-subtitle">Senior-level expertise in business development, commercial lease negotiation, and brand partnerships — without the overhead of a full-time hire.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Let's Talk</a>
+      <a href="#services" class="btn-outline">View Services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Years in UAE Retail</div>
+      </div>
+      <div>
+        <div class="stat-num">25</div>
+        <div class="stat-label">Leases Managed</div>
+      </div>
+      <div>
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Luxury Brand Partnerships</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title">Services that drive<br/><em>real results</em></h2>
+  <p class="section-intro">I work with businesses across the UAE that need senior commercial expertise on a flexible basis — whether for a single project or ongoing support.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-title">Business Development &amp; Sales Strategy</div>
+      <p class="service-desc">End-to-end BD support — pipeline building, client pitching, contract negotiation, and deal closure. For companies that need a sharp commercial mind without a full-time hire.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-title">Commercial Lease Negotiation</div>
+      <p class="service-desc">Lease review, negotiation, and renewal management with UAE's major mall landlords — EMAAR, ALDAR, MERAAS, MAF, and Dubai Holding. Protecting your commercial interests.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-title">Brand Entry &amp; Distribution</div>
+      <p class="service-desc">Helping international brands enter the UAE retail market — partner identification, commercial terms, brand guidelines compliance, and relationship management.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-title">Retail Operations Consulting</div>
+      <p class="service-desc">Store setup, team training, SOP development, and customer experience design for retail and showroom businesses looking to improve performance and consistency.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div>
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">15 years of UAE retail<br/><em>from the inside</em></h2>
+    <div class="about-body">
+      <p>I didn't learn the UAE market from a textbook. I built my expertise from the showroom floor, the lease negotiation table, and the boardroom — working my way from Sales Executive to managing brand partnerships and commercial leases for some of the UAE's most prominent retail groups.</p>
+      <p>Today I work independently, bringing that experience to businesses that need senior-level guidance without the cost of a permanent hire. Based in Dubai, available across the UAE.</p>
+    </div>
+    <br/><br/>
+    <a href="#contact" class="btn-primary" style="margin-top:8px;">Work With Me</a>
+  </div>
+  <div class="about-right">
+    <div class="cred-item">
+      <div class="cred-icon">🏢</div>
+      <div>
+        <div class="cred-title">Growth &amp; Partnership Manager</div>
+        <div class="cred-sub">CityLockers LLC, Dubai · 2025–2026<br/>Led end-to-end BD strategy, pitching, and deal closure.</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-icon">📋</div>
+      <div>
+        <div class="cred-title">Lease &amp; Brand Relationship Manager</div>
+        <div class="cred-sub">The Mattress Store General Trading LLC · 2023–2025<br/>Managed 25 leases with EMAAR, ALDAR, MERAAS, MAF.</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-icon">⭐</div>
+      <div>
+        <div class="cred-title">Customer Experience Manager</div>
+        <div class="cred-sub">The Mattress Store General Trading LLC · 2020–2023<br/>Built CX strategies and led in-store service excellence.</div>
+      </div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-icon">📈</div>
+      <div>
+        <div class="cred-title">Sales Executive → Sales Manager</div>
+        <div class="cred-sub">Intercoil International LLC · 2008–2019<br/>11-year tenure driving consistent sales growth across UAE.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands" id="brands">
+  <div class="section-label">Track Record</div>
+  <h2 class="section-title" style="margin: 0 auto 16px;">Brands &amp; landlords I've<br/><em>worked with</em></h2>
+  <p class="brands-intro">Experience spanning luxury brand management and commercial lease negotiations with the UAE's most prominent property groups.</p>
+  <div class="brands-cols">
+    <div class="brands-col">
+      <h4>Luxury Brands</h4>
+      <span class="brand-tag">Armani/Casa</span>
+      <span class="brand-tag">Bentley Home</span>
+      <span class="brand-tag">Bugatti Home</span>
+      <span class="brand-tag">Rolf Benz</span>
+      <span class="brand-tag">Håstens</span>
+      <span class="brand-tag">Vispring</span>
+      <span class="brand-tag">Ergomotion</span>
+    </div>
+    <div class="brands-col">
+      <h4>Mall Landlords</h4>
+      <span class="brand-tag">EMAAR</span>
+      <span class="brand-tag">ALDAR</span>
+      <span class="brand-tag">Dubai Holding</span>
+      <span class="brand-tag">MERAAS</span>
+      <span class="brand-tag">Majid Al Futtaim</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="howwework" id="engage">
+  <div class="section-label">Engagement Models</div>
+  <h2 class="section-title">How we can<br/><em>work together</em></h2>
+  <p class="section-intro">Flexible arrangements to suit your business needs — from a single project to ongoing strategic support.</p>
+  <div class="engagement-grid">
+    <div class="engagement-card">
+      <div class="engagement-badge">Most Popular</div>
+      <h3>Monthly Retainer</h3>
+      <p>Ongoing BD, lease management, or brand relationship support. I become an extension of your team — available, informed, and invested in your growth.</p>
+    </div>
+    <div class="engagement-card">
+      <h3>Project-Based</h3>
+      <p>A specific lease negotiation, brand entry, or sales campaign. Clear scope, clear deliverables, and focused execution from start to finish.</p>
+    </div>
+    <div class="engagement-card">
+      <h3>Advisory</h3>
+      <p>Strategic guidance for key business decisions. Ideal for founders or leadership teams who need an experienced sounding board in the UAE market.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Ready to grow your<br/><em>business in the UAE?</em></h2>
+  <p class="contact-sub">Whether you have a specific project in mind or just want to explore how I can help — I'd love to hear from you.</p>
+  <a href="mailto:bernadette.tongol@gmail.com" class="btn-primary">Send Me an Email</a>
+  <div class="contact-details">
+    <div class="contact-item">
+      <div class="contact-item-label">Phone / WhatsApp</div>
+      <div class="contact-item-val"><a href="tel:0524563935">052 456 3935</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Email</div>
+      <div class="contact-item-val"><a href="mailto:bernadette.tongol@gmail.com">bernadette.tongol@gmail.com</a></div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Location</div>
+      <div class="contact-item-val" style="color:rgba(255,255,255,0.7);">Dubai, UAE</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Driving</div>
+      <div class="contact-item-val" style="color:rgba(255,255,255,0.7);">Own vehicle · Available across UAE</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Bernadette Tongol. All rights reserved.</p>
+  <span>Business Development &amp; Retail Consultant · Dubai, UAE</span>
+</footer>
+
+</body>
+</html>
